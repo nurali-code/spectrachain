@@ -1,0 +1,209 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    color: #fff
+    font-size: 16px
+    line-height: 150%
+    background-color: #000
+    color: #000
+    font-family: "Open Sans", sans-serif
+    font-optical-sizing: auto
+    font-weight: weight
+    font-style: normal
+    font-variation-settings: "wdth" 100
+
+    display: flex
+    flex-direction: column
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+    &.is_active
+        overflow: hidden
+
+img
+    max-width: 100%
+
+ol, ul
+    padding-left: 20px
+    li
+        padding: 2px 0
+
+.container
+    width: 100%
+    margin: 0 auto
+    max-width: 1160px
+    padding: 0 15px
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+    font-family: "Merriweather", serif
+    line-height: 120%
+
+h2, .h2
+    font-size: 40px
+    font-weight: 500
+    margin: 0 0 40px
+    i
+        font-style: normal
+        white-space: nowrap
+
+h3, .h3
+    font-size: 30px
+    line-height: 140%
+    font-weight: 600
+    margin: 0 0 20px
+
+.btn
+    border-radius: 50px
+    font-size: 18px
+    line-height: 120%
+    padding: 8px 20px
+    overflow: hidden
+    &.--gray
+        padding: 1px 15px 1px 10px
+        background-color: #1a1a1a
+        color: white
+        gap: 7px
+
+    video
+        height: 36px
+        pointer-events: none
+
+    &.--outline
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        color: #fff
+
+a,
+button
+    color: #fff
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+textarea
+    display: block
+    width: 100%
+    border: 1px solid rgba(0, 0, 0, .2)
+    padding: 0 20px
+    font-size: 16px
+    min-height: 50px
+    border-radius: 7px
+    margin-bottom: 15px
+
+.check
+    position: relative
+    z-index: 1
+    margin-bottom: 25px
+    input
+        width: 18px
+        height: 18px
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+
+    label
+        padding-left: 30px
+        display: block
+
+textarea
+    padding: 10px 20px
+    resize: none
+
+section
+    padding: 80px 0
+
+.fx, .fxw
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.fxw
+    flex-wrap: wrap
+
+.dropdown
+    border-top: 1px solid rgba(0, 0, 0, .1)
+    &:first-of-type
+        border: none
+
+    &-btn
+        width: 100%
+        text-align: left
+        font-family: "Merriweather", serif
+        display: block
+        padding: 25px 56px 25px 0
+        font-weight: 600
+        font-size: 20px
+        position: relative
+        z-index: 1
+        &::after
+            content: '\00d7'
+            display: block
+            width: 34px
+            height: 34px
+            font-weight: normal
+            font-size: 32px
+            line-height: 34px
+            text-align: center
+            border-radius: 50%
+            color: rgba(0, 0, 0, .5)
+            position: absolute
+            z-index: 11
+            right: 10px
+            top: 50%
+            transform: translateY(-50%) rotate(45deg)
+            transition: all ease .3s
+
+        &:hover
+            &::after
+                background-color: rgba(0, 0, 0, .04)
+
+        &.is_active
+            &::after
+                transform: translateY(-50%)
+
+    &-content
+        display: none
+        max-width: 90%
+        padding: 0 10px 40px
+        font-size: 16px
+
+@media screen and ( max-width: 1010px )
+    section
+        padding: 60px 0
+    h2,.h2
+        font-size: 26px
+        margin: 0 0 30px
+
+    h3, .h3
+        font-size: 22px
+        line-height: 130%
+        margin: 0 0 10px
+
+    .dropdown
+        &-btn
+            font-size: 17px
+            line-height: 140%
+            padding: 18px 56px 18px 0
+
+        &-content
+            line-height: 130%
+            font-size: 15px
+            padding: 0 5px 30px 5px
+
+@media screen and ( max-width: 700px )
+    section
+        padding: 50px 0

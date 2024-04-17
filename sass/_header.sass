@@ -1,0 +1,77 @@
+.header
+    padding: 20px 0
+    .soc
+        a
+            display: block
+            padding: 1px
+            opacity: .8
+            position: relative
+            z-index: 1
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3)
+                &::before
+                    content: ''
+                    display: block
+                    width: 96%
+                    height: 96%
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: -1
+                    border-radius: 50%
+                    border: 1px solid #fff
+                    animation: ide 1.8s ease infinite 
+
+            &:hover
+                opacity: 1
+
+        img
+            display: block
+            width: 40px
+            margin: 0 auto 
+            height: 40px
+            object-fit: contain
+
+    &-nav
+        margin: 0 auto
+        justify-content: center
+        min-width: 50%
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 49.5495%, rgba(255, 255, 255, 0) 100%)
+        border-radius: 20px
+        transform: none
+        transform-origin: 50% 50% 0px
+        &__link
+            font-size: 14px
+            display: block
+            color: rgba(255, 255, 255, 0.7)
+            padding: 5px 10px
+
+            &::after
+                content: ''
+                display: inline-block
+                vertical-align: middle
+                width: 1px
+                height: 30px
+                margin-left: 20px
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%)
+                transform: none
+                transform-origin: 50% 50% 0px
+
+            &:last-of-type
+                &::after
+                    display: none
+
+    &-btns
+        gap: 10px
+
+@keyframes ide 
+    0% 
+        transform: scale(.7)
+        opacity: 1
+    80% 
+        transform: scale(.9)
+    100% 
+        opacity: 0
+        transform: scale(.93)
+    
