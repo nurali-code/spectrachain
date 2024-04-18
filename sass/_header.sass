@@ -21,7 +21,7 @@
                     z-index: -1
                     border-radius: 50%
                     border: 1px solid #fff
-                    animation: ide 1.8s ease infinite 
+                    animation: ide 1.8s ease infinite
 
             &:hover
                 opacity: 1
@@ -29,7 +29,7 @@
         img
             display: block
             width: 40px
-            margin: 0 auto 
+            margin: 0 auto
             height: 40px
             object-fit: contain
 
@@ -62,16 +62,18 @@
                 &::after
                     display: none
 
+            &:hover
+                color: rgba(255, 255, 255, 1)
+
     &-btns
         gap: 10px
 
-@keyframes ide 
-    0% 
+@keyframes ide
+    0%
         transform: scale(.7)
         opacity: 1
-    80% 
+    80%
         transform: scale(1)
-    100% 
+    100%
         opacity: 0
         transform: scale(1)
-    

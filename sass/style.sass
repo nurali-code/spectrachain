@@ -1,22 +1,21 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
+@import 'slick'
 
 .main
     text-align: center
+    min-height: 800px
+    height: calc( 100vh - 110px )
+    flex-direction: column
+    justify-content: center
+
     h1
 
     &__vid
         max-width: 45%
         margin: 0 auto
         display: block
-
-    hr
-        width: 100%
-        max-width: 45%
-        margin: 0 auto
-        height: 1px
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 49.5495%, rgba(255, 255, 255, 0) 100%)
 
     h1
         font-family: 'quantum', sans-serif
@@ -40,3 +39,83 @@
 
     &__text
         font-size: 21px
+
+    .btn
+        margin-top: 20px
+
+.features
+    padding: 20vw 0 50px
+    text-align: center
+    position: relative
+    z-index: 1
+    color: rgba(255, 255, 255, .8)
+    img
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        z-index: -1
+        width: 100%
+        max-width: 1000px
+        opacity: .8
+
+    .container
+        position: relative
+        z-index: 1
+        padding: 10px 15px
+        background: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 48.1981981981982%,rgba(255,255,255,0) 100%)
+        gap: 72px
+
+    .heading
+        font-size: 21px
+        margin: 0 0 10px
+
+    p
+        font-size: 13px
+
+.network
+    text-align: center
+    hr
+        margin: 15px auto
+        max-width: 80%
+
+    &-slide
+        font-family: "Sora", sans-serif
+        font-size: 34px
+        font-weight: 300
+        padding: 10px 2vw
+
+    &-nav
+        width: 100%
+        position: relative
+        z-index: 1
+        &::after
+            z-index: -1
+            content: ''
+            display: block
+            width: 80%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 10%
+            margin: 0 auto
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 49.5495%, rgba(255, 255, 255, 0) 100%)
+            opacity: .3
+
+    &-navitem
+        font-family: "Sora", sans-serif
+        font-size: 21px
+        font-weight: 100
+        color: rgba(255, 255, 255, 0.7)
+        padding: 20px 0
+
+    .slick
+        &-slide,
+        &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+            opacity: .2
+            transform: scale(.8)
+
+        &-center,
+        &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+            opacity: 1
+            transform: scale(1)
