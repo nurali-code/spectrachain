@@ -12,8 +12,10 @@ $('.network-slider').slick({
     centerMode: true,
     slidesToScroll: 1,
     autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 900,
     asNavFor: '.network-nav',
-    variableWidth: true,
+    // variableWidth: true,
     responsive: [
         {
             breakpoint: 1010,
@@ -25,15 +27,15 @@ $('.network-slider').slick({
 });
 
 $('.network-nav').slick({
-    infinite: false,
+    infinite: true,
     dots: false,
     arrows: false,
     slidesToShow: 1,
-    swipeToSlide: true,
     slidesToScroll: 1,
+    speed: 900,
+    // centerMode: true,
     vertical: true,
     asNavFor: '.network-slider',
-    focusOnSelect: true,
     responsive: [
         {
             breakpoint: 1010,
