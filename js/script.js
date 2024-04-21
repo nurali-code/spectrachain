@@ -22,9 +22,10 @@ $('.network-slider').slick({
     // variableWidth: true,
     responsive: [
         {
-            breakpoint: 1010,
+            breakpoint: 1000,
             settings: {
                 centerPadding: '0px',
+                slidesToShow: 1,
             }
         }
     ]
@@ -42,10 +43,10 @@ $('.network-nav').slick({
     asNavFor: '.network-slider',
     responsive: [
         {
-            breakpoint: 1010,
+            breakpoint: 1000,
             settings: {
-                slidesToShow: 4,
                 centerPadding: '0px',
+                slidesToShow: 1,
             }
         }
     ]
