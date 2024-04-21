@@ -1,5 +1,9 @@
-$('.btn__menu').on('click', function () {
-    $('.header-nav, .btn__menu, body').toggleClass('is_active');
+$('.btn_menu').on('click', function () {
+    $('.header-nav, .btn_menu, body').toggleClass('is_active');
+})
+
+$('.nav__link').on('click', function () {
+    $('.header-nav, .btn_menu, body').removeClass('is_active');
 })
 
 
