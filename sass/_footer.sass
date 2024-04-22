@@ -1,13 +1,27 @@
 .footer
     padding: 40px 0
-    .container
+    .fxw
         max-width: 670px
 
-    a, span 
+    a, span
+        display: block
         font-size: 13px
         color: rgba(255, 255, 255, .8)
 
-
     .heading
-        font-size: 32px !important
+        font-size: 32px
+        line-height: 110%
         font-family: 'quantum', sans-serif
+
+    @media screen and ( max-width: 1000px )
+        .fxw
+            flex-direction: column
+            gap: 20px
+
+        .heading
+            text-align: center
+            font-size: 50px
+            order: 1
+
+        a, span
+            order: 2

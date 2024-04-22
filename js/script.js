@@ -32,7 +32,7 @@ $('.network-slider').slick({
 });
 
 $('.network-nav').slick({
-    infinite: true,
+    // infinite: true,
     dots: false,
     arrows: false,
     slidesToShow: 1,
@@ -45,7 +45,6 @@ $('.network-nav').slick({
         {
             breakpoint: 1000,
             settings: {
-                centerPadding: '0px',
                 slidesToShow: 1,
             }
         }
