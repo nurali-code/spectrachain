@@ -50,3 +50,11 @@ $('.network-nav').slick({
         }
     ]
 });
+
+function copyText() {
+    var button = document.querySelector('.btn__copy');
+    var dataToCopy = button.getAttribute('data-copy');
+    navigator.clipboard.writeText(dataToCopy)
+        .then(function () { alert('Text copied: ' + dataToCopy); })
+        .catch(function (err) { console.error('Failed to copy text:', err); });
+}
