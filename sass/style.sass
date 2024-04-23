@@ -60,6 +60,18 @@
         &__text
             font-size: 13px
 
+    &.whitepaper
+        .container
+            max-width: 960px
+
+        .main__text
+            font-size: 18px
+            margin-bottom: 40px
+
+        .fxw
+            gap: 10px
+            justify-content: center
+
 .features
     padding: 20vw 0 50px
     text-align: center
@@ -295,5 +307,62 @@
         img
             width: 40px
             height: 40px
+
+.whitepaper
+    &-container
+        max-width: 840px
+        p
+            color: rgba(255, 255, 255, .7)
+            font-size: 16px
+            font-weight: 300
+            line-height: 130%
+        b
+            font-weight: 400
+            display: block
+            margin-bottom: 4px
+            color: rgba(255, 255, 255, 1)
+
+        .li
+            font-weight: 400
+            display: block
+            color: rgba(255, 255, 255, 1)
+            position: relative
+            margin: 30px auto 5px
+            &::before
+                content: ''
+                width: 5px
+                height: 5px
+                display: inline-block
+                vertical-align: middle
+                margin-right: 10px
+                border-radius: 50%
+                background-color: #fff
+
+        ul
+            padding-left: 20px
+            margin: 10px 0
+            li
+                position: relative
+                z-index: 1
+                padding-left: 30px
+                display: block
+                font-weight: 300
+                color: rgba(255, 255, 255, .7)
+                &::before
+                    content: ''
+                    width: 5px
+                    height: 5px
+                    display: inline-block
+                    vertical-align: middle
+                    margin-right: 10px
+                    border-radius: 50%
+                    background-color: #fff
+                    position: absolute
+                    top: 15px
+                    left: 0
+
+            i
+                font-style: normal
+                color: #fff !important
 
 @import 'footer'
