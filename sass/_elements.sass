@@ -60,6 +60,14 @@ h3, .h3
     font-weight: 600
     margin: 0 0 20px
 
+.fx, .fxw, .network-navitem
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.fxw, .network-navitem
+    flex-wrap: wrap
+
 .btn
     display: inline-block
     border-radius: 50px
@@ -68,7 +76,8 @@ h3, .h3
     padding: 8px 20px
     overflow: hidden
     &.--gray
-        padding: 1px 15px 1px 10px
+        display: inline-flex
+        padding: 2px 18px 0px 10px
         background-color: #1a1a1a
         color: white
         gap: 7px
@@ -114,6 +123,16 @@ h3, .h3
         font-size: 14px
         font-weight: 100
 
+    &__back
+        opacity: .7
+        font-size: 16px
+        color: #fff
+        gap: 10px
+        font-weight: 100
+        display: inline-flex
+        img
+            width: 32px
+
 a,
 button
     color: #fff
@@ -158,14 +177,6 @@ textarea
 section
     padding: 80px 0
 
-.fx, .fxw, .network-navitem
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-.fxw, .network-navitem
-    flex-wrap: wrap
-
 hr
     width: 100%
     max-width: 45%
@@ -204,8 +215,6 @@ ul
 
 video
     max-width: 100%
-
-
 
 @media screen and ( max-width: 1010px )
     section

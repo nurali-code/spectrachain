@@ -42,6 +42,25 @@
     .btn
         margin-top: 20px
 
+    &.whitepaper
+        padding: 1.5vw 0 5vw
+        header
+            width: 100%
+            padding: 0 15px
+            max-width: 1100px
+            text-align: right
+
+        .container
+            max-width: 960px
+
+        .main__text
+            font-size: 18px
+            margin-bottom: 40px
+
+        .fxw
+            gap: 10px
+            justify-content: center
+
     @media screen and ( max-width: 1000px )
         &__vid
             width: 100%
@@ -60,17 +79,10 @@
         &__text
             font-size: 13px
 
-    &.whitepaper
-        .container
-            max-width: 960px
-
-        .main__text
-            font-size: 18px
-            margin-bottom: 40px
-
-        .fxw
-            gap: 10px
-            justify-content: center
+        &.whitepaper
+            .fxw
+                flex-direction: column
+                align-items: stretch
 
 .features
     padding: 20vw 0 50px
@@ -310,7 +322,7 @@
 
 .whitepaper
     &-container
-        max-width: 840px
+        max-width: 780px
         p
             color: rgba(255, 255, 255, .7)
             font-size: 16px
@@ -338,16 +350,22 @@
                 border-radius: 50%
                 background-color: #fff
 
-        ul
-            padding-left: 20px
-            margin: 10px 0
+        ol, ul
+            width: calc( 100% - 20px )
+            margin: 10px 0 10px auto
             li
+
                 position: relative
                 z-index: 1
                 padding-left: 30px
-                display: block
                 font-weight: 300
                 color: rgba(255, 255, 255, .7)
+                margin-bottom: 10px
+
+        ul
+            li
+                display: block
+                margin-bottom: 5px
                 &::before
                     content: ''
                     width: 5px
@@ -364,5 +382,23 @@
             i
                 font-style: normal
                 color: #fff !important
+
+    @media screen and ( max-width: 1000px )
+        h1
+            font-size: 30px
+
+        .main__descr
+            font-size: 34px
+
+        &-container
+            .h2
+                font-size: 21px
+                margin-bottom: 10px
+                color: #fff
+
+            ol, ul
+                width: calc(100% - 2px)
+                li
+                    padding-left: 16px
 
 @import 'footer'
